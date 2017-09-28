@@ -1,0 +1,144 @@
+﻿<Page
+    x:Class="mDiagnostics.FinalResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:mDiagnostics"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:String x:Key="FRP_SpeakerTest">Динамик:</x:String>
+        <x:String x:Key="FRP_MicrophoneTest">Микрофон:</x:String>
+        <x:String x:Key="FRP_DisplayTest">Дисплей:</x:String>
+        <x:String x:Key="FRP_GeolocationTest">GPS:</x:String>
+        <x:String x:Key="FRP_AccelerometerTest">Ориентация:</x:String>
+        <x:String x:Key="FRP_CompassTest">Компас:</x:String>
+        <x:String x:Key="FRP_ConnectionTest">Соединение:</x:String>
+        <x:String x:Key="FRP_8">Проверка 8</x:String>
+        <x:String x:Key="FRP_9">Проверка 9</x:String>
+        <x:String x:Key="FRP_10">Проверка 10</x:String>
+        <x:String x:Key="FRP_11">Проверка 11</x:String>
+        <x:String x:Key="FRP_12">Проверка 12</x:String>
+        <x:String x:Key="FRP_13">Проверка 13</x:String>
+        <x:String x:Key="FRP_14">Проверка 14</x:String>
+        <x:String x:Key="FRP_15">Проверка 15</x:String>
+        <x:String x:Key="FRPtitle">Результаты проверки</x:String>
+    </Page.Resources>
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Assets/PortraitScreen.png"/>
+    </Page.Background>
+
+    <Grid x:Name="FRPgrid" HorizontalAlignment="Left" Height="580" VerticalAlignment="Top" Width="399.999969482422">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="FRPmaincontent" Margin="0" Grid.Column="1">
+            <Grid x:Name="FRP_title">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRPtitle" 
+            		Margin="0" 
+            		Text="{StaticResource FRPtitle}"
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="32" Foreground="White" SelectionHighlightColor="Black" FontWeight="Light" FontFamily="{StaticResource AppFont}" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Width="320"/>
+                <Image x:Name="FRP_resultmenu" Height="25" Width="25" Grid.Column="1" Source="Assets/btns/result_menu.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
+                    
+                </Image>
+            </Grid>
+            <Grid x:Name="FRP__SpeakerTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__SpeakerTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_SpeakerTest}"
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" Foreground="White" SelectionHighlightColor="Black" FontWeight="Light" FontFamily="{StaticResource AppFont}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__SpeakerTest2" Height="25" Width="25" Source="Assets/btns/failed.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Grid.Column="1"/>
+            </Grid>
+            <Grid x:Name="FRP__MicrophoneTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__MicrophoneTest1" 
+            		Text="{StaticResource FRP_MicrophoneTest}" 
+            		Margin="0,5" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__MicrophoneTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="FRP__DisplayTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__DisplayTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_DisplayTest}" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__DisplayTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="FRP__GeolocationTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__GeolocationTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_GeolocationTest}" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__GeolocationTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="FRP__AccelerometerTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__AccelerometerTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_AccelerometerTest}" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__AccelerometerTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="FRP__CompassTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__CompassTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_CompassTest}" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__CompassTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="FRP__ConnectionTest">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="FRP__ConnectionTest1" 
+            		Margin="0" 
+            		Text="{StaticResource FRP_ConnectionTest}" 
+            		Style="{ThemeResource HeaderTextBlockStyle}" 
+            		FontSize="22" FontFamily="{StaticResource AppFont}" FontWeight="Light" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Image x:Name="FRP__ConnectionTest2" Height="25" Width="25" Margin="0" Grid.Column="1" Source="Assets/btns/failed.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
